@@ -1,0 +1,17 @@
+IDDoBloco;Tipo de Tarefa;Modelo;Comp1;Comp2;Comp3;Comp4;Comp5;Comp6;Comp7;Comp8;Comp9;Comp10;Comp11;Comp12;Comp13;Comp14
+1;BB;luva;pato;mala;cavalo;;;;;;;;;
+1;BB;luva;pato;;;;;;;;;;;;;
+1;CC;luva;pato;;;;;;;;;;;;;
+1;AB;luva;mala;;;;;;;;;;;;;
+1;BC;luva;pato;;;;;;;;;;;;;
+1;AC;luva;mala;pato;cavalo;;;;;;;;;;;
+2;AB;tomate;luva;;;;;;;;;;;;;
+2;CB;tomate;tatu;;;;;;;;;;;;;
+2;CE;ca-va-lo;;;;;;;;;;;;;;
+2;AE;ta-tu;;;;;;;;;;;;;;;
+2;BE;lu-va;;;;;;;;;;;;;;
+3;AB;tomate;luva;;;;;;;;;;;;;
+3;CB;tomate;tatu;;;;;;;;;;;;;
+3;CE;ca-va-lo;;;;;;;;;;;;;;
+4;AE;ta-tu;;;;;;;;;;;;;;;
+4;BE;lu-va;;;;;;;;;;;;;;

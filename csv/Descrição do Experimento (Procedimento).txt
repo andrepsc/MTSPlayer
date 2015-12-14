@@ -1,0 +1,5 @@
+A pasta onde colocaremos os dados da pesquisa com as crianças. 
+
+Esse experimento permitirá testar como as crianças respondem à tarefas desenvolvidas para avaliar posteriormente a curácia do algorítmo que era a dificuldade das tarefas no SIEL.
+
+O teste que foi aplicado consiste em 66 tarefas de MTS e CR-MTS. Divididas em 12 tarefas do tipo AB, AC, AE e BE. Mais 6 tarefas do tipo BC, CB e CE. As palavras avaliadas foram as seguintes 6 palavras: apito, bolo, cavalo, fita, muleta e pato. Dessa forma, cada palavra foi avaliada uma ou duas vezes por cada tipo de tentativa.

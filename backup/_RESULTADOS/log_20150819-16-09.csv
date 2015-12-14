@@ -1,0 +1,10 @@
+Data/Hora/Min;Tarefa;Tipo de Tarefa;Modelo;Comparações;Resposta;Tentativas;"Latência da Tentativa (seg)";"Latência da Tarefa (seg)";Resultado;"Latência do Repertório (seg)";Acertos;Erros
+20150819/16/09;1;AE;fi-ta;va-ca;fita;1;"8,091";"8,091";correto;"31,921";9;0
+;2;CB;apito;tubo/bico/pipa;apito;1;"1,536";"1,536";correto;"";;
+;3;AB;fita;tatu;fita;1;"1,404";"1,404";correto;"";;
+;4;CB;bolo;cavalo/tomate;bolo;1;"2,214";"2,214";correto;"";;
+;5;CE;mu-le-ta;pa-to/to-ma-te/a-pi-to;muleta;1;"3,892";"3,892";correto;"";;
+;6;AB;bolo;vaca/fita;bolo;1;"2,449";"2,449";correto;"";;
+;7;BE;fi-ta;ta-tu;fita;1;"4,042";"4,042";correto;"";;
+;8;AC;apito;bico/pipa;apito;1;"2,621";"2,621";correto;"";;
+;9;BE;ca-va-lo;lu-va;cavalo;1;"5,673";"5,673";correto;"";;

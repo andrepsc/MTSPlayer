@@ -1,0 +1,13 @@
+Pseducodigo retreino :
+recebe como parametro a palavra modelo e o repertorio
+var numDetarefas = uma variavel que pega o numero de tarefas em que a palavra passada como parametro é modelo;
+var porcentagem = numeroDeacertos em tarefas com aquela palavra como modelo * 100 /numDeTarefas;
+var qtdeRetreino = 0 essa variavel é incrementada a cada vez que o retreino é executado
+se a porcentagem < 65% então
+	repete as tarefas da palavra
+caso contrario
+	encerra a sessão e gera o log
+
+Como na primeira execução qtdeRetreino é 0
+então se qtdeRetreino >=1
+	encerra a sessão e gerar o log setando as tarefas

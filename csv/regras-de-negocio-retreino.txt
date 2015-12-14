@@ -1,0 +1,6 @@
+Regras de Negócio :
+1)Retreinar se o desempenho for abaixo de 65% (esse percentual ou maneira de mensurar o desempenho sera melhorado em outro momento mas inicialmente trabalharemos com porcentagem)
+2)Retreina somente se a tarefa tiver reforço (esse requisito é importante pro MTS Player,pois checar se tem reforço é o que faz o mts definir se a tarefa é treino ou teste)
+3)Caso a opção retreinar esteja marcada mas não houver reforço,o MTS automaticamente seta o retreino pra false,pois como dito anteriormente,só é treino se tiver reforço,mas se vcs quiserem eu posso retirar essa regra do MTS
+4)Se houver retreino a função que computa os resultados nao é chamada e ela aguarda o resultado do retreino,isso falta eu definir com o gilberto quais campos definirão o resultado do retreino no arquivo de resultados.csv
+5)O Retreino ocorre somente 2 vezes,se a criança ainda assim nao conseguir acertar,ela ficará com o coeficiente de rendimento abaixo da media (65%)

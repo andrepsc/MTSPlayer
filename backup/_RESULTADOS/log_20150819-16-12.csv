@@ -1,0 +1,6 @@
+Data/Hora/Min;Tarefa;Tipo de Tarefa;Modelo;Comparações;Resposta;Tentativas;"Latência da Tentativa (seg)";"Latência da Tarefa (seg)";Resultado;"Latência do Repertório (seg)";Acertos;Erros
+20150819/16/12;1;AC;bolo;pato/bala;bolo;1;"1,55";"1,55";correto;"11,896";5;0
+;2;BE;ba-la;pa-to/bo-lo;bala;1;"4,882";"4,882";correto;"";;
+;3;CB;pato;bala/bolo;pato;1;"1,689";"1,689";correto;"";;
+;4;BC;bolo;bala/pato;bolo;1;"1,95";"1,95";correto;"";;
+;5;BC;bala;pato/bolo/pipa/tomate/luva;bala;1;"1,826";"1,826";correto;"";;

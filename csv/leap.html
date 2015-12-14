@@ -1,0 +1,57 @@
+<html>
+<head>
+	<title>Teste - Leap Motion</title>
+
+</head>
+<body>
+	<div id="output">
+
+	</div>
+<script src="//js.leapmotion.com/leap-0.6.4.min.js"></script>
+<script type="text/javascript">
+function concatData(id,data) {
+return id + ": " + data + "<br>";
+}
+function getFingerType (fingerType) {
+switch (fingerType) {
+	case 0:
+		return "Polegar";
+	case 1:
+		return "Indicador";
+	case 2:
+		return "Dedo do Meio";
+	case 3:
+		return "Anelar";
+	case 4:
+		return "Midinho";
+	break;
+}
+
+}
+var output = document.getElementById("output");
+var frameString = "",handString = "",fingerString = "";
+var hand,finger;
+var options = {enableGestures : true};
+Leap.loop(options, function (frame) {
+frameString = concatData("frame id", frame.id);
+frameString += concatData("number of hands",frame.hands.length);
+frameString += concatData("number of fingers",frame.fingers.length);
+frameString += "<br>";
+
+for (var i = 0,len = frame.hands.length;i < len; i++) {
+	hand = frame.hands[i];
+handString = concatData("Mao", hand.type);
+frameString += handString;
+}
+	
+for (var k =0,leng = frame.fingers.length;k < leng;k++) {
+finger = frame.fingers[k];
+var tipo = getFingerType(finger.type);
+fingerString = concatData("Tipo do Dedo : ",tipo);
+frameString += fingerString;
+}
+output.innerHTML = frameString;
+});
+</script>
+</body>
+</html>
