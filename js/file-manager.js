@@ -9,6 +9,7 @@
  * @version Revision 1.1.0
  * @since Build 1.0 (02 2015)
  * @author Pedro Montibeler
+ * @revisor Andre Fernandes
  */
 
 var retreinoIndex = []; //armazena se retreina ou nao
