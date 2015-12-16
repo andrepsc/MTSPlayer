@@ -191,7 +191,7 @@ function showLog(nome, repN) {
 	logHtml = logHtml.concat("<br>");
 	logHtml = logHtml.concat("<div class=\"table-responsive\">");
 	logHtml = logHtml.concat("<table id=\"log-detail\" class=\"table table-striped table-bordered table-hover table-condensed\">");
-	logHtml = logHtml.concat("<tr><th>Data/Hora/Min</th><th>N° da Tarefa</th><th>Tipo de Tarefa</th><th>Modelo</th><th>Comparações</th><th>Resposta</th><th>Tentativas</th><th>Latência da Tentativa (seg)</th><th>Latência da Tarefa (seg)</th><th>Resultado</th><th>Latência do Repertório (seg)</th><th>Acertos</th><th>Erros</th></tr>");
+	logHtml = logHtml.concat("<tr><th>Data/Hora/Min</th><th>ID Do Bloco</th><th>N° da Tarefa</th><th>Tipo de Tarefa</th><th>Modelo</th><th>Comparações</th><th>Resposta</th><th>Tentativas</th><th>Latência da Tentativa (seg)</th><th>Latência da Tarefa (seg)</th><th>Resultado</th><th>Latência do Repertório (seg)</th><th>Acertos</th><th>Erros</th></tr>");
 	logHtml = logHtml.concat("</table>");
 	logHtml = logHtml.concat("</div><!-- ./table-responsive -->");
 	logHtml = logHtml.concat("</div><!-- ./jumbotron -->");
@@ -205,33 +205,35 @@ function showLog(nome, repN) {
 			if (i == 0 && j == 0) {
 				cell0.innerHTML = log[repN]["timeStamp"];
 			}
-			var cell1 = row.insertCell(1);
+                        var cell1 = row.insertCell(1);
 			cell1.innerHTML = i+1;
 			var cell2 = row.insertCell(2);
-			cell2.innerHTML = parsedFiles[repN][i]["Tipo de Tarefa"];
+			cell2.innerHTML = parsedFiles[repN][i]["ID Do Bloco"];
 			var cell3 = row.insertCell(3);
-			cell3.innerHTML = parsedFiles[repN][i]["Modelo"];
+			cell2.innerHTML = parsedFiles[repN][i]["Tipo de Tarefa"];
 			var cell4 = row.insertCell(4);
-			cell4.innerHTML = getComps(repN, i);
+			cell4.innerHTML = parsedFiles[repN][i]["Modelo"];
 			var cell5 = row.insertCell(5);
-			cell5.innerHTML = log[repN]["t"+i+".a"+j+".response"];
+			cell5.innerHTML = getComps(repN, i);
 			var cell6 = row.insertCell(6);
-			cell6.innerHTML = j+1;
+			cell6.innerHTML = log[repN]["t"+i+".a"+j+".response"];
 			var cell7 = row.insertCell(7);
-			cell7.innerHTML = numToString(log[repN]["t"+i+".a"+j+".response_time"]);
+			cell7.innerHTML = j+1;
 			var cell8 = row.insertCell(8);
-			if (j == log[repN]["t"+i+".attempts"]-1) {
-				cell8.innerHTML = numToString(log[repN]["t"+i+".total_response_time"]);
-			}
+			cell8.innerHTML = numToString(log[repN]["t"+i+".a"+j+".response_time"]);
 			var cell9 = row.insertCell(9);
-			cell9.innerHTML = log[repN]["t"+i+".a"+j+".result"];
+			if (j == log[repN]["t"+i+".attempts"]-1) {
+				cell9.innerHTML = numToString(log[repN]["t"+i+".total_response_time"]);
+			}
 			var cell10 = row.insertCell(10);
+			cell10.innerHTML = log[repN]["t"+i+".a"+j+".result"];
 			var cell11 = row.insertCell(11);
 			var cell12 = row.insertCell(12);
+			var cell13 = row.insertCell(13);
 			if (i == 0 && j == 0) {
-				cell10.innerHTML = numToString(log[repN]["rep_response_time"]);
-				cell11.innerHTML = log[repN]["pos_result_num"];
-				cell12.innerHTML = log[repN]["neg_result_num"];
+				cell11.innerHTML = numToString(log[repN]["rep_response_time"]);
+				cell12.innerHTML = log[repN]["pos_result_num"];
+				cell13.innerHTML = log[repN]["neg_result_num"];
 			}
 		}
 	}
