@@ -210,7 +210,7 @@ function showLog(nome, repN) {
 			var cell2 = row.insertCell(2);
 			cell2.innerHTML = parsedFiles[repN][i]["ID Do Bloco"];
 			var cell3 = row.insertCell(3);
-			cell2.innerHTML = parsedFiles[repN][i]["Tipo de Tarefa"];
+			cell3.innerHTML = parsedFiles[repN][i]["Tipo de Tarefa"];
 			var cell4 = row.insertCell(4);
 			cell4.innerHTML = parsedFiles[repN][i]["Modelo"];
 			var cell5 = row.insertCell(5);
