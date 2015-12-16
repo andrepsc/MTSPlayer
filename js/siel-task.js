@@ -9,6 +9,7 @@
  * @version Revision 1.1.0
  * @since Build 1.0 (02 2015)
  * @author Pedro Montibeler
+ * @revisor Andre Fernandes
  */
 var logPalavra = [];
 var inRetreino = false; //flag que "avisa" para função geradora de log que a tarefa atual está sendo executada em modo normal ou que esta em retreino
@@ -36,7 +37,7 @@ var timeCheckIn; // Marca o tempo em que uma tarefa é exibida
 var timeCheckOut; // Marca o tempo em que uma tarefa é respondida
 
 function beginSession() { // Exibe o botão "play" inicial, altera para tela cheia
-       //ao iniciar a sessão insere um indice no array para que ele nao fique com estado undefined na hora de comparar
+   
     $("#task").html("<div class=\"header\"><div class=\"container\" style=\"text-align: center\"><input type=\"image\" src=\"res/play.jpg\" alt=\"SIEL Play\" onclick=\"showNextTask()\"></div></div>");
 	//toggleFullScreen();
 }
@@ -53,7 +54,7 @@ function playOutro() { // Exibe o ícone do SIEL em Fade Out, para marcar o fim 
 }
 
 function endSession() { // Desativa a tela cheia, volta a página inicial
-	//toggleFullScreen();
+	toggleFullScreen();
 	loadMain();
        
    //se nao retreina,encerra a sessão e salva o arquivo del og
@@ -214,7 +215,7 @@ $("body").css("background-color","transparent");
 }
 
 function checkReforco(repN) { // Verifica se tarefa é treino ou não
-     	
+     
     if (reforcoIndex[r][t][0] || reforcoIndex[r][t][1]) {
         showReforco(); // Se for, exibe reforço
         //se passar de uma tentativa,embaralha novamente a ordem das palavras regerando o html da tarefa
@@ -562,10 +563,9 @@ getTasksModel(palavra,repN);
     }
         if(percentual < 65) {
        alert("O percentual do aluno foi de " + percentual + " Redirecionando ao retreino");             
-        //loadTasksLocal(repN); 
-        loadTasksRetreino(repN,arrTasksOfModel);
          
-//generateTaskHtml(repN, i, modo, w);
+        loadTasksRetreino(repN,arrTasksOfModel);
+     
         acertos = 0;
         erros = 0;
         total = 0;
@@ -573,7 +573,8 @@ getTasksModel(palavra,repN);
   //após retreinar pela segunda vez,marca retreino como false
     if(retreina == 1) {
             retreinoIndex[repN] = false;
-        }
+           
+    }
         console.log(percentual);
 retreina ++;
 
