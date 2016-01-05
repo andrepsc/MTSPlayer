@@ -37,10 +37,10 @@ function loadRepTable() {
 		}
 	}
 }
-
+var repHtml = "<div class=\"jumbotron\">";
 function editRep(nome, repN) {
 	mainHtml = document.getElementById("content").innerHTML;
-	var repHtml = "<div class=\"jumbotron\">";
+	
 	repHtml = repHtml.concat("<div class=\"header\">");
 	repHtml = repHtml.concat("<div class=\"container\">");
 	repHtml = repHtml.concat("<h3>Detalhes do repertório "+nome+"</h3>");
@@ -68,9 +68,12 @@ function editRep(nome, repN) {
 	repHtml = repHtml.concat("<br>");
         repHtml = repHtml.concat("Retreinar :");
         	if (retreinoIndex[repN]) {
-		repHtml = repHtml.concat(" <input type=\"checkbox\" id=\"check-retreino\" checked>");
-	} else {
-		repHtml = repHtml.concat(" <input type=\"checkbox\" id=\"check-retreino\" >");
+		repHtml = repHtml.concat("<input type=\"checkbox\" id=\"check-retreino\" onchange=\"numOfRetreino()\" checked>");
+                repHtml = repHtml.concat("<br>Nº de Retreinos :  <input type=\"number\" id=\"number-retreino\" value='3' >");   
+                
+    } else {
+repHtml = repHtml.concat("<input type=\"checkbox\" id=\"check-retreino\" onchange=\"numOfRetreino()\">");
+repHtml = repHtml.concat("<span id=\"number-retreino\" style=\"display:none;\"><br>Nº de Retreinos : <input type=\"number\" value='3' ></span>");
 	}
 	repHtml = repHtml.concat("<br>");
         repHtml = repHtml.concat("Permitir fechar durante sessão:");
@@ -136,6 +139,22 @@ function checkSwitch(nome){
 	for (var i = 0; i < checkbox.length; i++) {
 		checkbox[i].checked = checkall.checked;
 	}
+}
+//função que checa se há retreino,caso sim,mostra um input number para o usuario inserir a qtde
+function numOfRetreino() {
+if ($('#check-retreino').is( ":checked" ) ){
+    //if($('#check-retreino').attr("checked",true)){
+                $('#number-retreino').css("display","block");
+               
+    }
+    else {
+        $('#number-retreino').css("display","none");
+    }
+    }
+ function hiddenRetreino() {
+    if($('#check-retreino').attr("checked",false)){
+        $('#number-retreino').css("display","none");
+    }
 }
 
 function execEdit(repN) {
